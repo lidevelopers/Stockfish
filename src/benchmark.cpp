@@ -439,7 +439,7 @@ vector<string> setup_bench(const Position& current, istream& is) {
   string limit     = (is >> token) ? token : (variant == CHESS_VARIANT ? "13" : "12");
   string fenFile   = (is >> token) ? token : "default";
   string limitType = (is >> token) ? token : "depth";
-  string evalType  = (is >> token) ? token : (variant == CHESS_VARIANT ? "mixed" : "classical");
+  string evalType = (is >> token) ? token : "mixed";
 
   go = limitType == "eval" ? "eval" : "go " + limitType + " " + limit;
 
